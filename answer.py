@@ -1,11 +1,11 @@
 from flask import Flask
 from flask import render_template,request
 
-app=Flask(__name__)
+answer=Flask(__name__)
 
-@app.route("/",methods=["GET","POST"])
-def index():
-    return(render_template("answer1&2.html"))
+@answer.route("/",methods=["GET","POST"])
+def answer1():
+    return(render_template("answer1.html"))
 
-if __name__=="__main__":
-    app.run()
+if __name__=="__answer1__":
+    answer.run()
