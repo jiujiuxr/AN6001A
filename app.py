@@ -4,6 +4,13 @@
 from flask import Flask 
 from flask import render_template,request 
 import textblob 
+import google.generativeai as genai
+import os
+
+#api=os.getenv("maskersuite")
+
+genai.configure(api_key="AIzaSyC-P8rqBb_6OHKZ32QDiFwHYccIxFN-ZDI")
+model=genai.GenerativeModel("gemini-1.5-flash")
 
 app=Flask(__name__)
 
