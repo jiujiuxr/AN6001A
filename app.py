@@ -1,9 +1,9 @@
 #
 #Syn code spaces is very high risk, sometimes fail
 
-from flask import Flask
-from flask import render_template,request
-import textblob
+from flask import Flask 
+from flask import render_template,request 
+import textblob 
 
 app=Flask(__name__)
 
@@ -12,6 +12,7 @@ def index():
     return(render_template("index.html"))
 
 @app.route("/main",methods=["GET","POST"])
+
 def main():
     name=request.form.get("q")
     return(render_template("main.html"))
